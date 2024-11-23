@@ -11,13 +11,8 @@ export const CreateTender = catchAsync(async(req,res)=>{
   res.status(httpStatus.CREATED).json({data});
 })
 export const updateTender = catchAsync(async(req,res)=>{
-  try{
   const data = await UpdateTenderService(req.body);
   res.status(httpStatus.OK).json({data});
-}
-  catch{
-
-  }
 })
 export const ViewTender = catchAsync(async(req,res) => {
 const data = await ViewTenderService(req.user);

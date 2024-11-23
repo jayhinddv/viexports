@@ -123,6 +123,10 @@ function TenderList({ list, role }) {
 								{formatDate(item.end_time)}
 							</p>
 							<p className="text-gray-400 mt-2">
+								<b>Status: </b>
+								{item.status}
+							</p>
+							<p className="text-gray-400 mt-2">
 								<b>Lowest Bid: </b>
 								{item.lowest_bid ? item.lowest_bid : "No bids yet"}
 							</p>
@@ -148,7 +152,7 @@ function TenderList({ list, role }) {
 	)}
 
 	{role !== "admin" &&
-		(item.status === "pending" || (item.status === "open" && new Date(item.end_time) >= new Date()) ? (
+		(item.status === "pending" || (item.status === "open" && new Date(item.start_time) >= new Date()) ? (
 			<button
 				className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg shadow-md"
 			>

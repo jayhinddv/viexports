@@ -45,6 +45,7 @@ export const UpdateTender = async(input)=>{
             ],
           ],
         },
+        order: [["createdAt", "DESC"]],
       });
       return tender;
     } catch (error) {
