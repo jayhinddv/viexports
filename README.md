@@ -1,6 +1,6 @@
 clone the repo 
  
-after that go to backend folder by cd bachend
+after that go to backend folder by cd backend
 
 change .env.example to .env
 
